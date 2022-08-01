@@ -1,0 +1,47 @@
+.home{
+    padding: 40px 40px;
+    max-width: 930px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    
+
+
+    .home_rings{
+        position: relative;
+        .title{
+            position: absolute;
+            transform: translate(40px, 205px );
+        }
+    }
+
+
+    .home_earrings{
+        position: relative;
+        .title{
+            position: absolute;
+            transform: translate(50px, 205px );
+        }
+    }
+
+
+    .home_wrist-watch{
+        position: relative;
+        padding-top: 30px;
+        .title{
+            position: absolute;
+            transform: translate(40px, 220px );
+        }
+    }
+
+
+    .home_bracelet{
+        position: relative;
+        padding-top: 30px;
+        .title{
+            position: absolute;
+            transform: translate(50px, 222px );
+        }
+    }
+}
