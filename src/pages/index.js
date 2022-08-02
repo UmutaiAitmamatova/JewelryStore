@@ -1,2 +1,7 @@
 export { default as Home} from './Home/Home'
 export { default as Cart} from './Cart/Cart'
+export { default as Rings} from './Rings/Rings'
+export { default as Bracelet} from './Bracelet/Bracelet'
+export { default as Earrings} from './Earrings/Earrings'
+export { default as WristWatch} from './WristWatch/WristWatch'
+export { default as Favorite} from './Favorite/Favorite'
