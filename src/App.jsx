@@ -4,6 +4,19 @@ import { Home, Cart, Rings, WristWatch, Earrings, Bracelet, Favorite } from './p
 import {  Routes, Route, Link } from "react-router-dom";
 
 function App() {
+  const [product, setProduct] = React.useState([]);
+
+  //пустой массив для useEffect говорит что это Component Didmount
+  //Будет выполняться при первом рендере
+  React.useEffect(() => {
+    fetch('http://localhost:3000/db.json').then((resp) => resp.json()).then(json => {
+      setProduct(json.product);
+    });
+  }, [])
+
+  console.log(product);
+
+
   return (
     <div className='wrapper'>
         <Header />

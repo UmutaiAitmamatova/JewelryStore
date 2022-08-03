@@ -2,19 +2,19 @@
   "rings": [
     {
       "id": 0,
-      "imageUrl": "/assets/rings1.png",
+      "imageUrl": "/product_covers/rings1.png",
       "name": "Fabiola",
       "price": 9986
     },
     {
       "id": 1,
-      "imageUrl": "/assets/rings2.png",
+      "imageUrl": "/product_covers/rings2.png",
       "name": "Gemma",
       "price": 15086
     },
     {
       "id": 2,
-      "imageUrl": "/assets/rings3.png",
+      "imageUrl": "/product_covers/rings3.png",
       "name": "Twinkle",
       "price": 7986
     }
@@ -24,19 +24,19 @@
   "earrings": [
     {
       "id": 0,
-      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
+      "imageUrl": "/product_covers/earrings1.png",
       "name": "Single Men Earrings Pie Barbell Stainless",
       "price": 9998
     },
     {
       "id": 1,
-      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
+      "imageUrl": "/product_covers/earrings2.png",
       "name": "Fashion S925 Silver Handmade",
       "price": 11998
     },
     {
       "id": 2,
-      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
+      "imageUrl": "/product_covers/earrings3.png",
       "name": "925 Silver Post Sparkling Crystal Cz",
       "price": 13998
     }
@@ -47,19 +47,19 @@
   "wrist_watch": [
     {
       "id": 0,
-      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
+      "imageUrl": "/product_covers/watch1.png",
       "name": "Automatic & Mechanical",
       "price": 15998
     },
     {
       "id": 1,
-      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
+      "imageUrl": "/product_covers/watch2.png",
       "name": "Chronometer",
       "price": 7998
     },
     {
       "id": 2,
-      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
+      "imageUrl": "/product_covers/watch3.png",
       "name": "Atomic Radio Controlled",
       "price": 9998
     }
@@ -69,19 +69,19 @@
   "bracelet": [
     {
       "id": 0,
-      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
+      "imageUrl": "/product_covers/bracelet1.png",
       "name": "Wholesale Women Jewelry Fashion",
       "price": 8998
     },
     {
       "id": 1,
-      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
+      "imageUrl": "/product_covers/bracelet2.png",
       "name": "Top sell 18K Gold Plated Stainless",
       "price": 12998
     },
     {
       "id": 2,
-      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
+      "imageUrl": "/product_covers/bracelet3.png",
       "name": "Hip Hop Jewelry Gold Plated ",
       "price": 10998
     }
