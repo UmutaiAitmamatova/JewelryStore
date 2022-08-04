@@ -3,10 +3,17 @@ import './Rings.scss';
 import { Product } from '../../components'
 
 
-const Rings = () => {
+const Rings = ({ items }) => {
+
   return (
     <div className="rings">
-        <Product/>
+
+      {
+        items.map((obj) => (
+          <Product key={obj.id} {...obj} />
+        ))
+      }
+
 </div>
   )
 }

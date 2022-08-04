@@ -1,21 +1,41 @@
 import React from 'react';
+import axios from 'axios'
 import { Header, Footer } from './components';
 import { Home, Cart, Rings, WristWatch, Earrings, Bracelet, Favorite } from './pages'
 import {  Routes, Route, Link } from "react-router-dom";
 
 function App() {
-  const [product, setProduct] = React.useState([]);
-
+  const [rings, setRings] = React.useState([]);
   //пустой массив для useEffect говорит что это Component Didmount
   //Будет выполняться при первом рендере
   React.useEffect(() => {
-    fetch('http://localhost:3000/db.json').then((resp) => resp.json()).then(json => {
-      setProduct(json.product);
+    axios.get('http://localhost:3000/db.json').then(({ data }) => {
+      setRings(data.rings);
     });
   }, [])
 
-  console.log(product);
 
+  const [watch, setWatch] = React.useState([]);
+  React.useEffect(() => {
+    axios.get('http://localhost:3000/db.json').then(({ data }) => {
+      setWatch(data.wrist_watch);
+    });
+
+  }, [])
+  const [earrings, setEarrings] = React.useState([]);
+  React.useEffect(() => {
+    axios.get('http://localhost:3000/db.json').then(({ data }) => {
+      setEarrings(data.earrings);
+    });
+  }, [])
+
+
+  const [bracelet, setBracelet] = React.useState([]);
+  React.useEffect(() => {
+    axios.get('http://localhost:3000/db.json').then(({ data }) => {
+      setBracelet(data.bracelet);
+    });
+  }, [])
 
   return (
     <div className='wrapper'>
@@ -24,11 +44,13 @@ function App() {
       <div className="content">
         <Routes>
           <Route path="/" element={<Home />} exact />
-          <Route path="/rings" element={<Rings />} />
+
+          <Route path="/rings" element={<Rings items={rings}/>} />
+          <Route path="/wrist_watch" element={<WristWatch items={watch}/>} />
+          <Route path="/earrings" element={<Earrings items={earrings}/>} />
+          <Route path="/bracelet" element={<Bracelet items={bracelet}/>} />
+
           <Route path="/cart" element={<Cart />} />
-          <Route path="/wrist_watch" element={<WristWatch />} />
-          <Route path="/earrings" element={<Earrings />} />
-          <Route path="/bracelet" element={<Bracelet />} />
           <Route path="/favorite" element={<Favorite />} />
         </Routes>
       </div>
