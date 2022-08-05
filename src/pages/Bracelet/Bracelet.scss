@@ -1,3 +1,11 @@
 .bracelet{
-    display: flex;
+    .bracelet_title{
+        margin: 30px 0 auto 40px;
+
+    }
+    
+    .content{
+        display: flex;
+        justify-content: space-between;
+    }
 }

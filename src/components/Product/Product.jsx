@@ -13,7 +13,7 @@ const Product = ({name, imageUrl, price}) => {
             <span>{price} руб. </span>
             <GrFavorite size={24}/>
             <div className="added_cart">
-                в корзине
+                в корзинy
             </div>
         </div>
     </div>
