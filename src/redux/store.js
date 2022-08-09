@@ -1,16 +1,9 @@
-import { createStore } from 'redux';
+import { createStore, combineReducers, compose } from 'redux';
+import React, { memo } from 'react'
+import rootReducer from './reducers'
 
-function counter(state = { value: 0 }, action) {
-    switch (action.type) {
-        case 'counter/incremented':
-            return { value: state.value + 1 }
-        case 'counter/decremented':
-            return { value: state.value - 1 }
-        default:
-            return state
-    }
-}
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(counter);
+const store = createStore(rootReducer, composeEnhancers());
 
 export default store;
