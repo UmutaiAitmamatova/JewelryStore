@@ -1,9 +1,11 @@
 import React from 'react';
 import { GrFavorite, GrCart } from 'react-icons/gr';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './Header.scss';
 
 const Header = () => {
+    const {totalPrice} = useSelector(({ cart }) => cart)
     return (
         <div className="header_block">
             <div className='header'>
@@ -28,7 +30,7 @@ const Header = () => {
                     <Link to="/cart">
                         <div className='header_cart'>
                             <GrCart size={23} className='header_icons' />
-                            <span className='span'>9 956 руб.</span>
+                            <span className='span'>{totalPrice} руб.</span>
                         </div>
                     </Link>
                 </div>

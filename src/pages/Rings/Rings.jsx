@@ -1,15 +1,21 @@
 import React from 'react';
 import './Rings.scss';
 import { Product } from '../../components'
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import {addToCart} from '../../redux/actions/cart'
 
 
 const Rings = () => {
+  const dispatch = useDispatch()
   const { items } = useSelector(({rings}) => {
     return {
       items: rings.items
     }
   })
+
+  const handleAddCart = (obj) => {
+    dispatch(addToCart(obj))
+  }
 
   return (
     <div className="rings">
@@ -30,7 +36,7 @@ const Rings = () => {
 
       <div className="content">
         {items && items.map((obj) => (
-          <Product key={obj.id} {...obj} />
+          <Product onAddCart={handleAddCart} key={obj.id} {...obj} />
         ))}
       </div>
     </div>

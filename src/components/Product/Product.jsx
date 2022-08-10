@@ -3,7 +3,17 @@ import './Product.scss';
 import { GrFavorite } from 'react-icons/gr';
 import {  Rings1 } from '../../assets/index'
 
-const Product = ({name, imageUrl, price}) => {
+const Product = ({id, name, imageUrl, price, onAddCart}) => {
+
+  const handleAddCart = () => {
+    const obj = {
+      id, 
+      name, 
+      imageUrl, 
+      price
+    }
+    onAddCart(obj)
+  }
   return (
     <div className="product">
     <div className="product_block">
@@ -12,7 +22,7 @@ const Product = ({name, imageUrl, price}) => {
         <div className="cart_total_block">
             <span>{price} руб. </span>
             <GrFavorite size={24}/>
-            <div className="added_cart">
+            <div onClick={handleAddCart} className="added_cart">
                 в корзинy
             </div>
         </div>

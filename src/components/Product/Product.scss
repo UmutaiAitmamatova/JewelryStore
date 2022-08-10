@@ -47,6 +47,12 @@
                 background-color: #D6D6D6;
                 border-radius: 5px;
                 text-align: center;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: #c2c1c1;
+                    
+                }
             }
         }
     }
