@@ -1,5 +1,6 @@
 import React from 'react';
-import './Cart.scss'
+import './Cart.scss';
+import CartItem from '../../components/CartItem/CartItem'
 
 const Cart = () => {
   return (
@@ -10,7 +11,11 @@ const Cart = () => {
         </svg>
       </div>
 
-      <div className="content"></div>
+      <div className="content">
+        <CartItem/>
+        <CartItem/>
+        <CartItem/>
+      </div>
     </div>
   )
 }

@@ -1,9 +1,16 @@
 import React from 'react';
 import './Earrings.scss';
-import { Product } from '../../components'
+import { Product } from '../../components';
+import { useSelector } from 'react-redux';
 
 
-const Earrings = ({ items }) => {
+
+const Earrings = () => {
+  const { items } = useSelector(({earrings}) => {
+    return {
+      items: earrings.items
+    }
+  })
   return (
     <div className="earrings">
       <div className="earrings_title">

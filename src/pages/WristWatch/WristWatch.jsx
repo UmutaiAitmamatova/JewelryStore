@@ -1,9 +1,14 @@
-import React from 'react';
-import './WristWatch.scss';
-import { Product } from '../../components'
+import React from "react";
+import "./WristWatch.scss";
+import { Product } from "../../components";
+import { useSelector } from "react-redux";
 
-
-const WristWatch = ({ items }) => {
+const WristWatch = () => {
+  const { items } = useSelector(({ watch }) => {
+    return {
+      items: watch.items,
+    };
+  });
   return (
     <div className="WristWatch">
       <div className="WristWatch_title">
@@ -27,6 +32,6 @@ const WristWatch = ({ items }) => {
       </div>
     </div>
   );
-}
+};
 
-export default WristWatch
+export default WristWatch;

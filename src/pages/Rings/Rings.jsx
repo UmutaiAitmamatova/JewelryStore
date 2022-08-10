@@ -1,9 +1,15 @@
 import React from 'react';
 import './Rings.scss';
 import { Product } from '../../components'
+import { useSelector } from 'react-redux';
 
 
-const Rings = ({ items }) => {
+const Rings = () => {
+  const { items } = useSelector(({rings}) => {
+    return {
+      items: rings.items
+    }
+  })
 
   return (
     <div className="rings">
@@ -23,7 +29,7 @@ const Rings = ({ items }) => {
       </div>
 
       <div className="content">
-        {items.map((obj) => (
+        {items && items.map((obj) => (
           <Product key={obj.id} {...obj} />
         ))}
       </div>
