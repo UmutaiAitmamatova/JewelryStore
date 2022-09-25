@@ -21,7 +21,7 @@ const Product = ({id, name, imageUrl, price, onAddCart}) => {
         <p className='product_title'>{name}</p>
         <div className="cart_total_block">
             <span>{price} руб. </span>
-            <GrFavorite size={24}/>
+            <GrFavorite className='added_favorite' size={24} />
             <div onClick={handleAddCart} className="added_cart">
                 в корзинy
             </div>

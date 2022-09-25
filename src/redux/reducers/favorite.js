@@ -1,9 +1,9 @@
 const initialState = {
     items: {},
-    totalPrice: 0
+    totalFavorite: 0
 }
 
-const cart = (state = initialState, action) => {
+const favorite = (state = initialState, action) => {
     switch (action.type) {
         case "ADD_PRODUCT_CART": {
             const newItems = {
@@ -13,13 +13,11 @@ const cart = (state = initialState, action) => {
                     : [...state.items[action.payload.id], action.payload],
                 };
             const allProduct = [].concat.apply([], Object.values(newItems))  
-            const totalCount = allProduct.reduce((sum, obj) => obj.price + sum, 0)
 
             return {
                 ...state,
                 items: newItems,
-                totalPrice: allProduct.length,
-                totalCount,
+                totalFavorite: allProduct.length,
             };
         }
 
@@ -28,4 +26,4 @@ const cart = (state = initialState, action) => {
     }
 };
 
-export default cart;
+export default favorite;

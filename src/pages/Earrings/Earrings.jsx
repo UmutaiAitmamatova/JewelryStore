@@ -1,16 +1,22 @@
 import React from 'react';
 import './Earrings.scss';
 import { Product } from '../../components';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import {addToCart} from '../../redux/actions/cart'
 
 
 
 const Earrings = () => {
+  const dispatch = useDispatch()
   const { items } = useSelector(({earrings}) => {
     return {
       items: earrings.items
     }
   })
+  const handleAddCart = (obj) => {
+    dispatch(addToCart(obj))
+  }
+  
   return (
     <div className="earrings">
       <div className="earrings_title">
@@ -30,7 +36,7 @@ const Earrings = () => {
 
       <div className="content">
       {items.map((obj) => (
-        <Product key={obj.id} {...obj} />
+        <Product onAddCart={handleAddCart} key={obj.id} {...obj} />
       ))}
       </div>
     </div>

@@ -1,14 +1,22 @@
 import React from "react";
 import "./WristWatch.scss";
 import { Product } from "../../components";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from 'react-redux';
+import {addToCart} from '../../redux/actions/cart'
 
 const WristWatch = () => {
+  const dispatch = useDispatch()
   const { items } = useSelector(({ watch }) => {
     return {
       items: watch.items,
     };
   });
+
+  const handleAddCart = (obj) => {
+    dispatch(addToCart(obj))
+  }
+
+
   return (
     <div className="WristWatch">
       <div className="WristWatch_title">
@@ -27,7 +35,7 @@ const WristWatch = () => {
       </div>
       <div className="content">
         {items.map((obj) => (
-          <Product key={obj.id} {...obj} />
+          <Product onAddCart={handleAddCart} key={obj.id} {...obj} />
         ))}
       </div>
     </div>

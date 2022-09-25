@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 import './Header.scss';
 
 const Header = () => {
-    const {totalPrice} = useSelector(({ cart }) => cart)
+    const {totalCount} = useSelector(({ cart }) => cart)
+    const {totalFavorite} = useSelector(({ favorite }) => favorite)
     return (
         <div className="header_block">
             <div className='header'>
@@ -23,14 +24,14 @@ const Header = () => {
                     <Link to="/favorite">
                         <div className='header_favorite'>
                             <GrFavorite size={23} className='header_icons' />
-                            <span className='span'>1</span>
+                            <span className='span'>{totalFavorite}</span>
                         </div>
                     </Link>
 
                     <Link to="/cart">
                         <div className='header_cart'>
                             <GrCart size={23} className='header_icons' />
-                            <span className='span'>{totalPrice} руб.</span>
+                            <span className='span'>{totalCount} руб.</span>
                         </div>
                     </Link>
                 </div>

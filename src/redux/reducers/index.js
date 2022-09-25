@@ -4,6 +4,7 @@ import earrings from './earrings';
 import watch from './watch';
 import bracelet from './bracelet';
 import cart from './cart';
+import favorite from './favorite';
 
 
 const rootReducer = combineReducers({
@@ -11,7 +12,8 @@ const rootReducer = combineReducers({
     earrings,
     bracelet,
     watch,
-    cart
+    cart,
+    favorite
 })
 
 
