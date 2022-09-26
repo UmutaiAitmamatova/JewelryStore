@@ -3,6 +3,7 @@ import './Rings.scss';
 import { Product } from '../../components'
 import { useSelector, useDispatch } from 'react-redux';
 import {addToCart} from '../../redux/actions/cart'
+import {addToFavorite} from '../../redux/actions/favorite'
 
 
 const Rings = () => {
@@ -15,6 +16,10 @@ const Rings = () => {
 
   const handleAddCart = (obj) => {
     dispatch(addToCart(obj))
+  }
+
+  const handleAddFavorite = (obj) => {
+    dispatch(addToFavorite(obj))
   }
 
   return (
@@ -36,7 +41,7 @@ const Rings = () => {
 
       <div className="content">
         {items && items.map((obj) => (
-          <Product onAddCart={handleAddCart} key={obj.id} {...obj} />
+          <Product onAddFavorite={handleAddFavorite} onAddCart={handleAddCart} key={obj.id} {...obj} />
         ))}
       </div>
     </div>
